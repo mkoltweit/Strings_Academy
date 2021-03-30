@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            Author: Michelle Koltweit
+            Filename: index.html
+            Date: 12/4/19
+        -->
+        <title>GCC Assignment 10</title>
+        <meta charset="utf-8">
+        <!-- css -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- javaScript -->
+        <script src="myCode.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        
+    </head>
+
+    <body>
+        <div id="header">
+            <h1 id="title">Strings Academy</h1>
+        </div>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Class Schedule</a></li>
+                    <li><a href="form.html">Join A Class</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mainBody">
+            <h2>Class Schedules</h2>
+            <div class="mainContent">
+                <div class="pricing">
+                    <form action="form.html">
+
+                        <h3>Pricing</h3>
+                        <p>Please select class level for pricing.</p>
+                        <label>Instrument:</label>
+                        <select id="instrument" onchange="calculateClass(), passValues()">
+                            <option value="">select</option>
+                            <option value="Violin">Violin</option>
+                            <option value="Viola">Viola</option>
+                            <option value="Cello">Cello</option>
+                        </select><br /><br />
+                        <div id=totalPrice>
+                            <label>Cost of Individual Class $</label>
+                            <input type="text" id="indivClass" disabled /><br /><br />
+                            <label>Total Cost of Class(12 weeks) $</label>
+                            <input type="text" id="total" disabled /> 
+                            <p>*Price varies based on instrument</p>
+                        </div>
+                            <input type="submit" class="buttons" name="signUpB" id="signUpB" value="Sign up" />
+                        </form>
+                </div>
+                <script>
+                    function passValues() {
+        
+                    var instrumentType = document.getElementById("instrument");
+                    selectedInstrumentType = instrumentType.options[instrumentType.selectedIndex].value;
+                    sessionStorage.setItem("passInstrument", selectedInstrumentType);
+
+                    var grandTotal = document.getElementById("total").value;
+                    sessionStorage.setItem("passGrandTotal", grandTotal);
+            
+                }
+        
+                </script>
+                    
+                <div class="scheduleTable">
+                <h3>To view class times, please select an instrument:</h2>
+                <form>
+                    <label for="instrumentChoice">Instrument</label>
+                    <select id="instrumentChoice" onchange="showSchedule()">
+                            <option value="Violin" default>Violin</option>
+                            <option value="Viola">Viola</option>
+                            <option value="Cello">Cello</option>
+                        </select>
+                </form>
+                <div id="violinSchedule">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Sunday</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td>Violin-Level 1<br />Room 101</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Violin-Level 2<br />Room 102</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3:00</td>
+                                <td>Violin-Level 1<br />Room 101</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Violin-Level 1<br />Room 101</td>
+                            </tr>
+                            <tr>
+                                <td>4:00</td>
+                                <td>Violin-Level 2<br />Room 102</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Violin-Level 3<br />Room 103</td>
+                                <td>Violin-Level 2<br />Room 102</td>
+                            </tr>
+                            <tr>
+                                <td>5:00</td>
+                                <td>Violin-Level 3<br />Room 103</td>
+                                <td></td>
+                                <td>Violin-Level 3<br />Room 103</td>
+                                <td></td>
+                                <td>Violin-Level 2<br />Room 102</td>
+                                <td></td>
+                                <td>Violin-Level 3<br />Room 103</td>
+                            </tr>
+                            <tr>
+                                <td>6:00</td>
+                                <td></td>
+                                <td>Violin-Level 1<br />Room 101</td>
+                                <td>Violin-Level 1<br />Room 101</td>
+                                <td></td>
+                                <td>Violin-Level 2<br />Room 102</td>
+                                <td>Violin-Level 2<br />Room 102</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Violin-Level 1<br />Room 101</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div id="violaSchedule">
+                <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Sunday</th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>1:00</td>
+                                <td>Viola-Level 1<br />Room 101</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>2:00</td>
+                                <td>Viola-Level 2<br />Room 102</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>3:00</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Viola-Level 2<br />Room 102</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>4:00</td>
+                                <td></td>
+                                <td>Viola-Level 1<br />Room 101</td>
+                                <td></td>
+                                <td>Viola-Level 3<br />Room 103</td>
+                                <td></td>
+                                <td></td>
+                                <td>Viola-Level 1<br />Room 101</td>
+                            </tr>
+                            <tr>
+                                <td>5:00</td>
+                                <td></td>
+                                <td></td>
+                                <td>Viola-Level 1<br />Room 101</td>
+                                <td></td>
+                                <td>Viola-Level 1<br />Room 101</td>
+                                <td></td>
+                                <td>Viola-Level 2<br />Room 102</td>
+                            </tr>
+                            <tr>
+                                <td>6:00</td>
+                                <td></td>
+                                <td></td>
+                                <td>Viola-Level 2<br />Room 102</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>7:00</td>
+                                <td></td>
+                                <td></td>
+                                <td>Viola-Level 3<br />Room 103</td>
+                                <td></td>
+                                <td></td>
+                                <td>Viola-Level 3<br />Room 103</td>
+                                <td>Viola-Level 3<br />Room 103</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="celloSchedule">
+                    <table>
+                            <thead>
+                                <tr>
+                                    <th>Time</th>
+                                    <th>Sunday</th>
+                                    <th>Monday</th>
+                                    <th>Tuesday</th>
+                                    <th>Wednesday</th>
+                                    <th>Thursday</th>
+                                    <th>Friday</th>
+                                    <th>Saturday</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12:00</td>
+                                    <td>Cello-Level 3<br />Room 103</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Cello-Level 1<br />Room 101</td>
+                                </tr>
+                                <tr>
+                                    <td>1:00</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Cello-Level 3<br />Room 103</td>
+                                </tr>
+                                <tr>
+                                    <td>2:00</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>3:00</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Cello-Level 1<br />Room 101</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Cello-Level 2<br />Room 102</td>
+                                </tr>
+                                <tr>
+                                    <td>4:00</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Cello-Level 2<br />Room 102</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>5:00</td>
+                                    <td></td>
+                                    <td>Cello-Level 1<br />Room 101</td>
+                                    <td>Cello-Level 2<br />Room 102</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>6:00</td>
+                                    <td>Cello-Level 1<br />Room 101</td>
+                                    <td>Cello-Level 2<br />Room 102</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Cello-Level 3<br />Room 103</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>7:00</td>
+                                    <td>Cello-Level 2<br />Room 102</td>
+                                    <td>Cello-Level 3<br />Room 103</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Cello-Level 2<br />Room 102</td>
+                                    <td>Cello-Level 1<br />Room 101</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+                
+            
+                    <div class="instructors">
+                            <h2>Violin Instructors</h2>
+                
+                        <div class="instructor">
+                            <img src="images/martinic.jpg" alt="Picture of Maggie Martinic-Jercic" />
+                            <p>Maggie Martinic-Jercic</p>
+                            <input type="button" class="bio" id="martinicInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructor">
+                                <img src="images/livingston.jpg" alt="Picture of Nancy Livingston" />
+                                <p>Nancy Livingston</p>
+                                <input type="button" class="bio" id="livingstonInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructor">
+                                <img src="images/moeckel.jpg" alt="Picture of Steven Moeckel" />
+                                <p>Steven Moeckel</p>
+                                <input type="button" class="bio" id="moeckelInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructorBio" id="showViolinBio"></div>
+                    </div>
+                    
+                    <div class="instructors">
+                            <h2>Viola Instructors</h2>
+                
+                        <div class="instructor">
+                            <img src="images/deatherage.jpg" alt="Picture of Mark Deatherage" />
+                            <p>Mark Deatherage</p>
+                            <input type="button" class="bio" id="deatherageInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructor">
+                                <img src="images/mckay.jpg" alt="Picture of Christopher McKay" />
+                                <p>Christopher McKay</p>
+                                <input type="button" class="bio" id="mckayInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructor">
+                                <img src="images/bea.jpg" alt="Picture of Karen Bea" />
+                                <p>Karen Bea</p>
+                                <input type="button" class="bio" id="beaInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructorBio" id="showViolaBio"></div>
+                    </div>
+                    
+                    <div class="instructors">
+                            <h2>Cello Instructors</h2>
+                
+                        <div class="instructor">
+                            <img src="images/hunsinger.jpg" alt="Picture of Melita Hunsinger" />
+                            <p>Melita Hunsinger</p>
+                            <input type="button" class="bio" id="hunsingerInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructor">
+                                <img src="images/simiz.jpg" alt="Picture of Jan Simiz" />
+                                <p>Jan Simiz</p>
+                                <input type="button" class="bio" id="simizInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructor">
+                                <img src="images/anderegg.jpg" alt="Picture of Peter Anderegg" />
+                                <p>Peter Anderegg</p>
+                                <input type="button" class="bio" id="andereggInfo" value="About" onclick="showBio(this.id)" /><br /><br />
+                        </div>
+                        <div class="instructorBio" id="showCelloBio"></div>
+                    </div>
+                    
+    </body>
+    <footer>
+            <div class="contact">
+                <p>Strings Academy &#8226; 123 W. Park Ave. Glendale, AZ &#8226; (000)000-0000 &#8226; stringsacademy@example.com</p>
+            </div>
+    </footer>
+
+</html>

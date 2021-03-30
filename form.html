@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            Author: Michelle Koltweit
+            Filename: index.html
+            Date: 12/4/19
+        -->
+        <title>GCC Assignment 10</title>
+        <meta charset="utf-8">
+        <!-- css -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- javaScript -->
+        <script src="myCode.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        
+    </head>
+    <div id="header">
+        <h1 id="title">Strings Academy</h1>
+    </div>
+    <body>
+        <script>
+            window.onload = postValues;
+            function postValues() {
+                document.getElementById("passInstrumentName").value = sessionStorage.getItem("passInstrument");
+                document.getElementById("totalAmount").value = sessionStorage.getItem("passGrandTotal");
+            }
+        </script>
+        <div class="navigation">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="schedule.html">Class Schedule</a></li>
+                    <li><a href="form.html">Join A Class</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mainBody">
+            <h1>Sign up</h1>
+            <form action="submit.html">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="firstName">First Name*</label>
+                    <input type="text" id="firstName" maxlength="30" placeholder="John" required /><br /><br />
+                    <label for="lastName">Last Name*</label>
+                    <input type="text" id="lastName" maxlength="30" placeholder="Smith" required /><br /><br />
+                    <label for="emailInput">Email*</label>
+                    <input type="email" id="emailInput" placeholder="john@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required /><br /><br />
+                    <label for="phoneInput">Phone Number*</label>
+                    <input type="tel" id="phoneInput" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000" required /><br /><br />
+                    <label>Address 1*</label>
+                    <input type="text" maxlength="50" required /><br /><br />
+                    <label>Address 2</label>
+                    <input type="text" maxlength="50"   /><br /><br />
+                    <label>City*</label>
+                    <input type="text" required /><br /><br />
+                    <label>State*</label>
+                    <select id="stateList" required>
+                            <option value="">--</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AK">AK</option>
+                            <option value="AL">AL</option>
+                            <option value="AZ">AZ</option>
+                            <option value="AR">AR</option>
+                            <option value="CA">CA</option>
+                            <option value="CO">CO</option>
+                            <option value="CT">CT</option>
+                            <option value="DE">DE</option>
+                            <option value="FL">FL</option>
+                            <option value="GA">GA</option>
+                            <option value="HI">HI</option>
+                            <option value="ID">ID</option>
+                            <option value="IL">IL</option>
+                            <option value="IN">IN</option>
+                            <option value="IA">IA</option>
+                            <option value="KS">KS</option>
+                            <option value="KY">KY</option>
+                            <option value="LA">LA</option>
+                            <option value="ME">ME</option>
+                            <option value="MD">MD</option>
+                            <option value="MA">MA</option>
+                            <option value="MI">MI</option>
+                            <option value="MN">MN</option>
+                            <option value="MS">MS</option>
+                            <option value="MO">MO</option>
+                            <option value="MT">MT</option>
+                            <option value="NE">NE</option>
+                            <option value="NV">NV</option>
+                            <option value="NH">NH</option>
+                            <option value="NJ">NJ</option>
+                            <option value="NM">NM</option>
+                            <option value="NY">NY</option>
+                            <option value="NC">NC</option>
+                            <option value="ND">ND</option>
+                            <option value="OH">OH</option>
+                            <option value="OK">OK</option>
+                            <option value="OR">OR</option>
+                            <option value="PA">PA</option>
+                            <option value="RI">RI</option>
+                            <option value="SC">SC</option>
+                            <option value="SD">SD</option>
+                            <option value="TN">TN</option>
+                            <option value="TX">TX</option>
+                            <option value="UT">UT</option>
+                            <option value="VT">VT</option>
+                            <option value="VA">VA</option>
+                            <option value="WA">WA</option>
+                            <option value="WV">WV</option>
+                            <option value="WI">WI</option>
+                            <option value="WY">WY</option>
+                    </select><br /><br />
+                    <label>Zip Postal Code*</label>
+                    <input type="text" pattern="^[0-9]{5}(?:-[0-9]{4})?$" placeholder="12345" required /><br /><br />
+                    <p>* = required fields</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Lesson Information</legend>
+                    <label>Instrument*</label>
+                    <input type="text" id="passInstrumentName" /><br /><br />
+                    <label>Level*</label>
+                    <select required>
+                        <option value="">select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select><br /><br />
+                    <label>Class Time*</label><br /><br />
+                    <select required>
+                        <option value="">select</option>
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    </select>
+                    <select required>
+                            <option value="">select</option>
+                            <option value="12:00">12:00</option>
+                            <option value="1:00">1:00</option>
+                            <option value="2:00">2:00</option>
+                            <option value="3:00">3:00</option>
+                            <option value="4:00">4:00</option>
+                            <option value="5:00">5:00</option>
+                            <option value="6:00">6:00</option>
+                            <option value="7:00">7:00</option>
+                        </select><br /><br />
+                        <input type="checkbox" id="lesson" onclick="showLesson()" />
+                        <label>I would like to be contacted about private lessons</label><br /><br />
+                    <div id="privateLesson">
+                        <label>Preferred Private Lesson Instructor</label>
+                        <select>
+                            <option value="">select</option>
+                            <option value="Maggie Martinic-Jercic">Maggie Martinic-Jercic</option>
+                            <option value="Nancy Livingston">Nancy Livingston</option>
+                            <option value="Steven Moeckel">Steven Moeckel</option>
+                            <option value="Mark Deatherage">Mark Deatherage</option>
+                            <option value="Christopher McKay">Christopher McKay</option>
+                            <option value="Karen Bea">Karen Bea</option>
+                            <option value="Melita Hunsinger">Melita Hunsinger</option>
+                            <option value="Jan Simiz">Jan Simiz</option>
+                            <option value="Peter Anderegg">Peter Anderegg</option>
+                        </select>
+                    </div><br />
+                    <label>Total $</label>
+                    <input type="text" id="totalAmount" /><br />
+                    <p>*Total amount does not reflect cost of private lessons</p>
+                </fieldset>
+                <fieldset>
+                    <legend>Payment</legend>
+                    <label class="cardLabel">
+                        <img src="images/sb_amex.png" />
+                        <input name="creditCard" value="amex" type="radio" required />
+                    </label>
+                    <label class="cardLabel">
+                        <img src="images/sb_discover.png" />
+                        <input name="creditCard" value="discover" type="radio" required />    
+                    </label>
+                    <label class="cardLabel">
+                        <img src="images/sb_master.png" />
+                        <input name="creditCard" value="master" type="radio" required />  
+                    </label>
+                    <label class="cardLabel">
+                        <img src="images/sb_visa.png" />
+                        <input name="creditCard" value="visa" type="radio" required />
+                    </label><br /><br />
+                    <label for="creditCardInput">Credit Card Number</label>
+                    <input id="creditCardInput" type="text" required 
+                    pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" /><br /><br />
+                    <label for="expMonth">Expiration Date</label>
+                    <select id="expMonth" required>
+                        <option value="">--Month--</option>
+                        <option value="1">January (01)</option>
+                        <option value="2">February (02)</option>
+                        <option value="3">March (03)</option>
+                        <option value="4">April (04)</option>
+                        <option value="5">May (05)</option>
+                        <option value="6">June (06)</option>
+                        <option value="7">July (07)</option>
+                        <option value="8">August (08)</option>
+                        <option value="9">September (09)</option>
+                        <option value="10">October (10)</option>
+                        <option value="11">November (11)</option>
+                        <option value="12">December (12)</option>
+                    </select>
+                    <select id="expYear" required>
+                        <option value="">--Year--</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                    </select><br /><br />
+                    <label for="cscInput">CSC</label>
+                    <input id="cscInput" type="text" placeholder="nnn" pattern="^\d{3}$" required />
+                </fieldset>
+                <input type="submit" class="buttons" name="submitB" id="submitB" value="Submit" />   
+            </form>
+        </div>
+    </body>
+    <footer>
+            <div class="contact">
+                <p>Strings Academy &#8226; 123 W. Park Ave. Glendale, AZ &#8226; (000)000-0000 &#8226; stringsacademy@example.com</p>
+            </div>
+    </footer>
+
+</html>

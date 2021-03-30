@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!--
+            Author: Michelle Koltweit
+            Filename: index.html
+            Date: 12/4/19
+        -->
+        <title>GCC Assignment 10</title>
+        <meta charset="utf-8">
+        <!-- css -->
+        <link rel="stylesheet" href="styles.css">
+        <!-- javaScript -->
+        <script src="myCode.js"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        
+    </head>
+    
+    <body>
+        
+            <div class="main">
+                
+                <div id="header">
+                    <h1 id="title">Strings Academy</h1>
+                </div>
+                <div class="navigation">
+                    <nav>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="schedule.html">Class Schedule</a></li>
+                            <li><a href="form.html">Join A Class</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="mainBody">
+                <p>
+                    Strings is a fun and innovative strings program that teaches kids AND adults how to play the violin, viola, and cello.<br /><br />
+
+                    While most strings methods are based on outdated 17th-19th century European fundamentals, the Strings approach 
+                    is easy, fun, exciting, and rewarding! Not only do our classes enable beginners the capacity to play their favorite 
+                    songs on their VERY FIRST lesson, but our students look forward to each class, time and time again!<br /><br />
+
+                    We have listed some of the features and basic information about our unique program below. 
+                    Please select the type of class you are interested in and find out what sets us apart from other methods. It's 
+                    easy to see why ours is the best strings program available!<br /><br />
+
+                    We offer three different Strings courses:<br />
+                    <ul>
+                        <li>Grades 1-5</li>
+                        <li>Grades 6-8</li>
+                        <li>Grades 9-12</li>
+                        <li>Adult Classes</li>
+                        <li>Private Lessons</li>
+                    </ul>
+                </p>
+            <table>
+                <tr>
+                    <th>Duration of Each Level</th>
+                    <th>Length of Each Class</th>
+                    <th>Class Size</th>
+                </tr>
+                <tr>
+                    <td>12 Weeks</td>
+                    <td>60 minutes</td>
+                    <td>Maximum of 18 Students</td>
+                </tr>
+            </table>
+            <div class="instrumentsContent">
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                            <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="images/violinClass.jpg" alt="Violin Class" style="width:100%">
+                            <div class="text">Violin Class</div>
+                            </div>
+                            
+                            <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="images/celloClass.png" alt="Cello Class" style="width:100%">
+                            <div class="text">Cello Class</div>
+                            </div>
+                            
+                            <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="images/orchestra.jpg" alt="Strings Academy Orchestra" style="width:100%">
+                            <div class="text">Strings Academy Orchestra</div>
+                            </div>
+
+
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            
+                            </div>
+                            <br>
+                            
+                            <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
+                            <span class="dot" onclick="currentSlide(3)"></span>  
+                            </div>
+            </div>
+        
+        
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+
+                    if (n > slides.length) {
+                        slideIndex = 1;
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length;
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex-1].style.display = "block";
+                    dots[slideIndex-1].className += " active";
+                }
+
+            </script>
+                <div id="levelsInfo">
+                    <h4>Level 1:</h4>
+                        <ul>
+                            <li>Introduction to note names and simple counting</li>
+                            <li>Note Values</li>
+                            <li>Rests</li>
+                            <li>Counting Notes</li>
+                            <li>Steady Beats</li>
+                            <li>Rhythm</li>
+                        </ul>
+                    <h4>Level 2:</h4>
+                        <ul>
+                            <li>Introduction to music notation</li>
+                            <li>Accidentals</li>
+                            <li>Music Intervals</li>
+                            <li>Rhythm</li>
+                        </ul>
+                    <h4>Level 3:</h4>
+                        <ul>
+                            <li>Theoretical Concept</li>
+                            <li>Vibrato</li>
+                            <li>Scales</li>
+                            <li>Rhythm</li>
+                        </ul>
+                    <h3>Other Great Features</h3>
+                        <ul>
+                            <li><strong>Song Repertoire:</strong> Students should be able to play 2-5 songs learned in their level.</li>
+                            <li><strong>Performances:</strong>Every student will have an opportunity to play in a recital at the end of 12 weeks.</li>
+                        </ul>
+                </div>
+                <form action="schedule.html">
+                    <input type="submit" class="buttons" name="scheduleB" id="scheduleB" value="View Class Schedule" />
+                </form>
+        </body>
+        <footer>
+            <form id="moreInfo" action="info.html">
+                <fieldset>
+                    <p>For more information on classes or private lessons, please enter your information.</p>
+                    <legend>Information</legend>
+                    <label>Name</label>
+                    <input type="text" placeholder="First and Last" maxlength="30" required />
+                    <label>Email</label>
+                    <input type="email" placeholder="john@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+                    <label>Phone Number</label>
+                    <input type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="000-000-0000" required />
+                    <input type="submit" class="buttons" id="information" value="More Info" />
+                </fieldset>
+            </form>
+        </div>
+    </div>
+        <div class="contact">
+            <p>Strings Academy &#8226; 123 W. Park Ave. Glendale, AZ &#8226; (000)000-0000 &#8226; stringsacademy@example.com</p>
+        
+    </footer>
+    
+</html>

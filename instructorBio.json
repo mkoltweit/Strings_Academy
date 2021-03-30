@@ -1,0 +1,65 @@
+[
+    {
+        "Name": "Maggie Martinic-Jercic",
+        "Instrument": "Violin",
+        "Education": "North Carolina School of the Arts, University of Michigan, Eastman School of Music in New York",
+        "Experience": "40 years",
+        "Orchestras": "Vera Cruz symphony, Orpheus Chamber Orchestra, Mantovani Orchestra, Santa Fe Opera Orchestra, Phoenix Symphony(current)" 
+    },
+    {
+        "Name": "Nancy Livingston",
+        "Instrument": "Violin" ,
+        "Education": "Bachelor's in Music Performance from Northern Arizona University",
+        "Experience": "40 years",
+        "Orchestras": "Phoenix Symphony(current)"
+    },
+    {
+        "Name": "Steven Moeckel",
+        "Instrument": "Violin",
+        "Education": "Mozarteum in Salzburg",
+        "Experience": "35 years",
+        "Orchestras": "Tucson Symphony Orchestra, Germany's Ulm Philharmonic, Phoenix Symphony(current)" 
+    },
+    {
+        "Name": "Mark Deatherage",
+        "Instrument": "Viola",
+        "Education": "Bachelor's and Master's degrees from Indiana University",
+        "Experience": "33 years",
+        "Orchestras": "Saint Louis Symphony Orchestra, Indianapolis Symphony Orchestra, Evansville Philharmonic Orchestra, Phoenix Symphony(current)" 
+    },
+    {
+        "Name": "Christopher McKay",
+        "Instrument": "Viola",
+        "Education": "Louisiana State University (BM), Indiana University (MM)",
+        "Experience": "35 years",
+        "Orchestras": "Grant Park Orchestra, Louisville Orchestra, Indianapolis Symphony, Evansville Philharmonic Orchestra, New Jersey Opera, Baton Rouge Symphony Orchestra, Owensboro Symphony, Lancaster Festival Orchestra, Phoenix Symphony(current)" 
+    },
+    {
+        "Name": "Karen Bea",
+        "Instrument": "Viola",
+        "Education": "Bachelor of Music degree at Indiana University, Masters at Carnegie Mellon in Pennsylvania",
+        "Experience": "34 years",
+        "Orchestras": "Pittsburgh Symphony Orchestra, Phoenix Symphony(current)" 
+    },
+    {
+        "Name": "Melita Hunsinger",
+        "Instrument": "Cello",
+        "Education": "St. Olaf College with a Bachelor of Arts degree in music, Master of Music degree from Rice University",
+        "Experience": "30 years",
+        "Orchestras": "Arkansas Symphony Orchestra, Grand Rapids Symphony, Richmond Symphony, Phoenix Symphony(current)" 
+    },
+    {
+        "Name": "Jan Simiz",
+        "Instrument": "Cello",
+        "Education": "Ciprian Porumbescu Conservatory in Bucharest, University of Southern California",
+        "Experience": "45 years",
+        "Orchestras": "Sacramento Symphony Orchestra, Phoenix Symphony(current)" 
+    },
+    {
+        "Name": "Peter Anderegg",
+        "Instrument": "Cello",
+        "Education": "Mathematics at Harvard University, M.M. degree from The Juilliard School",
+        "Experience": "25 years",
+        "Orchestras": "Springfield (MA) Symphony, UBS Verbier Festival Orchestra, Phoenix Symphony(current)" 
+    }
+]
